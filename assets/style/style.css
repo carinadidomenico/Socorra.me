@@ -17,7 +17,7 @@ body {
 
 .nav {
     width: 90%;
-    position: absolute;
+    position: fixed;
     display: flex;
     margin: 0px 5%;
     align-items: center;
@@ -26,17 +26,24 @@ body {
 }
 
 .nav__menu-hamburguer {
-    width: 50px;
+    cursor: pointer;
+    width: 45px;
     padding: 15px;
 }
 
 .nav__menu {
-    display: flex;
-
+    display: none;
+    flex-direction: column;
+    color: white;
+    background-color: #2783bd;
+    margin-top: 10%;
+    padding: 30px;
+    font-size: 16px;
 }
 
 .nav__titulo h3 {
     font-family: 'Allerta Stencil', sans-serif;
+    color: white;
 }
 
 
