@@ -3,11 +3,12 @@
 body {
     margin: 0;
     font-size: 16px;
-    font-family: 'Varela Round', sans-serif;
+    font-family: 'Merriweather', serif;
 }
 
-a {
+* a {
     text-decoration: none;
+    cursor: pointer;
 }
 
 
@@ -27,6 +28,11 @@ a {
 .nav__menu-hamburguer {
     width: 50px;
     padding: 15px;
+}
+
+.nav__menu {
+    display: flex;
+
 }
 
 .nav__titulo h3 {
@@ -52,12 +58,19 @@ a {
 /* ABOUT */
 
 .about {
+    width: 80%;
+    margin: 15px auto;
     text-align: center;
-    width: 70%;
+    border: 7px #09548c double;
 }
 
 .about h3 {
-    
+    font-family: 'Raleway', sans-serif;
+}
+
+.about__content {
+    width: 90%;
+    margin: 0 auto;
 }
 
 
@@ -79,7 +92,7 @@ a {
 }
 
 .search__text:focus {
-    border: 2px solid rgba(0, 0, 0, 0.651);
+    border: 2px solid #09548c;
 }
 
 .search__button {
@@ -96,5 +109,15 @@ a {
 /* FOOTER */
 
 .credits {
-    background-color: transparent;
+    background: linear-gradient(#2783bd, #09548c);
+    width: 100%;
+    position: fixed;
+    text-align: center;
+    padding: 10px;
+    color: white;
+    bottom: 0;
+}
+
+.credits a {
+    color: white;
 }
