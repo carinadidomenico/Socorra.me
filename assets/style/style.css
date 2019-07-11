@@ -6,9 +6,10 @@ body {
     font-family: 'Merriweather', serif;
 }
 
-* a {
+a {
     text-decoration: none;
     cursor: pointer;
+    color: white;
 }
 
 
@@ -16,32 +17,35 @@ body {
 /* NAVBAR */
 
 .nav {
-    width: 90%;
+    width: 80%;
     position: fixed;
     display: flex;
-    margin: 0px 5%;
+    margin: 0 10%;
     align-items: center;
     justify-content: space-between;
-    background-color: transparent;
 }
 
 .nav__menu-hamburguer {
     cursor: pointer;
     width: 45px;
-    padding: 15px;
+    padding-top: 15px;
 }
 
 .nav__menu {
-    display: none;
+    display: flex;
+    padding: 4.5rem 0 0 2.5rem;
     flex-direction: column;
     color: white;
-    background-color: #2783bd;
-    margin-top: 10%;
-    padding: 30px;
-    font-size: 16px;
+    font-size: 1.5rem;
+    height: 0;
+    width: fit-content;
+    overflow: hidden;
+    transition: 1.5s;
+    font-family: 'Raleway', sans-serif;
+    
 }
 
-.nav__titulo h3 {
+.nav__titulo {
     font-family: 'Allerta Stencil', sans-serif;
     color: white;
 }
@@ -56,8 +60,6 @@ body {
     height: 40vh;
     background-size: cover;
     background-position: center;
-    display: flex;
-    justify-content: flex-end;
 }
 
 
@@ -120,11 +122,25 @@ body {
     width: 100%;
     position: fixed;
     text-align: center;
-    padding: 10px;
+    font-size: 1.15rem;
+    padding: 1.5rem 0;
     color: white;
     bottom: 0;
 }
 
 .credits a {
     color: white;
+}
+
+
+
+/* ANIMAÇÕES */
+
+.fadeIn {
+    animation: fadeIn 1s ease-in-out;
+}
+
+@keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
 }
