@@ -17,8 +17,8 @@ menuHamburguer.addEventListener ('click', function () {
 
 const listaCasos = JSON.stringify(card)
 const listaCasosJs = JSON.parse(listaCasos)
-let search = document.querySelector (".search");
-let searchText = document.querySelector (".search__text");
+const search = document.querySelector (".search");
+const searchText = document.querySelector (".search__text");
 
 const insertCard = (card) => {
 
@@ -26,31 +26,40 @@ const insertCard = (card) => {
     card.forEach(caso => {
         
         cards += `
-        <div>
-        <h2>${caso.condicao}</h2>
-          <p>${caso.grau}</p>
-          <p>${caso.comoProceder}</p>
-          <p>${caso.naoFazer}</p>
-          </div>
+        <div class="card__container">
+            <div class= "card__content">
+                <h2>${caso.condicao}</h2>
+                <h3>Gravidade: ${caso.grau}</h3>
+                <h3>O que fazer: </h3>
+                <p>${caso.comoProceder}</p>
+                <h3>Cuidado!</h3>
+                <p>${caso.naoFazer}</p>
+            </div>
+        </div>
           `
         });
-
         return cards
     }
 
-    document.querySelector(".card").innerHTML = insertCard(listaCasosJs.caso)
+document.querySelector(".card").innerHTML = insertCard(listaCasosJs.caso)
 
 
 search.addEventListener('submit', function(e) {
     e.preventDefault();
-
     console.log (searchText.value)
+    let filtro = listaCasosJs.caso.condicao.filter ((item) => {
+        return item.condicao.toLowerCase().searchText.value.toLowerCase()
+    })
 
-
-    
+    document.querySelector(".card").innerHTML = insertCard(filtro)    
 }) 
 
 
+let limpar = (value) => {
+    if(!value) {
+        document.querySelector(".card").innerHTML = insertCard(filter);
+    }
+}
 
 
         // const orderList = (caso1, caso2, propriedade) => {
