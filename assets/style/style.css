@@ -19,7 +19,8 @@ a {
 .nav {
     width: 80%;
     display: flex;
-    margin: 0 10%;
+    margin: 0px 10%;
+    padding-top: 1rem;
     align-items: center;
     justify-content: space-between;
 }
@@ -32,7 +33,7 @@ a {
 
 .nav__menu {
     display: flex;
-    padding: .5rem 0 0 2.5rem;
+    margin: 0 10%;
     flex-direction: column;
     color: white;
     font-size: 1.5rem;
@@ -45,8 +46,20 @@ a {
 }
 
 .nav__titulo {
-    font-family: 'Allerta Stencil', sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 0 2rem;   
+    font-family: 'Love Ya Like A Sister', cursive;
     color: white;
+}
+
+.nav__titulo h2 {
+    margin-right: 1rem;
+}
+
+.nav__titulo img {
+    width: 50px;
 }
 
 
@@ -67,7 +80,7 @@ a {
 
 .about {
     width: 80%;
-    margin: 15px auto;
+    margin: 3rem auto;
     text-align: center;
     border: 7px #09548c double;
 }
@@ -83,13 +96,32 @@ a {
 
 
 
-/* FORM */
+/* TELEFONES IMPORTANTES */
+
+.telefones {
+    width: fit-content;
+    margin: 3rem auto;
+    border: 7px #09548c double;
+}
+
+.telefones h3 {
+    font-family: 'Raleway', sans-serif;
+}
+
+.telefones__content {
+    width: 90%;
+    margin: 0 auto;
+}
+
+
+
+/* SEARCH */
 
 .search {
     margin: 0 auto;
     display: flex;
     align-items: center;
-    justify-content: space-around;
+    justify-content: center;
     width: 70%;
     padding: 20px;
 }
@@ -109,7 +141,7 @@ a {
 }
 
 .search__button img {
-    width: 30px;
+    width: 20px;
 }
 
 
@@ -135,6 +167,7 @@ a {
 .credits {
     background: linear-gradient(#2783bd, #09548c);
     width: 100%;
+    background-attachment: fixed;
     text-align: center;
     font-size: 1.15rem;
     padding: 1.5rem 0;
@@ -188,13 +221,13 @@ a {
     .nav {
         padding-top: 2rem;
     }
-    .nav__menu {
-        padding: 0.5rem 0 0 5.0rem;
-    }
     .nav__menu-hamburguer {
-        width: 60px;
+        width: 45px;
     }
     .nav__titulo {
-        font-size: 2rem;
+        font-size: 3rem;
+    }
+    .search__button img {
+        width: 30px;
     }
 }
