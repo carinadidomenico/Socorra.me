@@ -180,8 +180,10 @@ a {
     }
     .banner {
         height: 32rem;
+        background-size: contain;
         background-position: top;
         background-attachment: fixed;
+        clip-path: polygon(0 0, 100% 0, 100% 50%, 50% 100%, 0% 50%);
     }
     .nav {
         padding-top: 2rem;
