@@ -15,8 +15,7 @@ menuHamburguer.addEventListener ('click', function () {
 
 // FORM
 
-const listaCasos = JSON.stringify(card)
-const listaCasosJs = JSON.parse(listaCasos)
+const listaCasos = card
 const search = document.querySelector (".search");
 const searchText = document.querySelector (".search__text");
 
@@ -41,41 +40,29 @@ const insertCard = (card) => {
         return cards
     }
 
-document.querySelector(".card").innerHTML = insertCard(listaCasosJs.caso)
+document.querySelector(".card").innerHTML = insertCard(listaCasos.caso)
 
 
-search.addEventListener('submit', function(e) {
+searchText.addEventListener('keyup', function(e) {
     e.preventDefault();
-    console.log (searchText.value)
-    let filtro = listaCasosJs.caso.condicao.filter ((item) => {
-        return item.condicao.toLowerCase().searchText.value.toLowerCase()
+    let filtro = listaCasos.caso.filter ((item) => {
+        let searchInput = searchText.value.toLowerCase()
+        return item.condicao.toLowerCase().includes(searchInput)
     })
 
     document.querySelector(".card").innerHTML = insertCard(filtro)    
 }) 
 
 
-let limpar = (value) => {
-    if(!value) {
-        document.querySelector(".card").innerHTML = insertCard(filter);
+const orderList = (caso1, caso2, propriedade) => {
+
+    if(caso1[propriedade].toLowerCase() < caso2[propriedade].toLowerCase()){
+        return -1
     }
+    if(caso1[propriedade].toLowerCase() > caso2[propriedade].toLowerCase()){
+        return 1
+    }
+        return 0
 }
 
-
-        // const orderList = (caso1, caso2, propriedade) => {
-        //     if(caso1[propriedade].toLowerCase() < caso2[propriedade].toLowerCase()){
-        //       return -1
-        //     }
-        //     if(caso1[propriedade].toLowerCase() > caso2[propriedade].toLowerCase()){
-        //       return 1
-        //     }
-        //     return 0
-        //   }
-          
-        //   const ordenarCard = document.getElementById("ordenar-livro")
-          
-        //   ordenarCard.addEventListener("click", (e) => {
-        //     const listaOrdenada = listaCasos.caso.sort((caso1, caso2) => orderList(caso1, caso2, "livro"))
-        //     document.querySelector (".card").innerHTML = insertCard(listaOrdenada)
-        //   })
           
