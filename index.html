@@ -5,7 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <meta author="Carina Di Domenico">
-    <link href="https://fonts.googleapis.com/css?family=Allerta+Stencil|Merriweather|Raleway&display=swap" rel="stylesheet">
+    <link rel="shortcut icon" href="assets/img/favicon.png" type="image/x-icon">
+    <link href="https://fonts.googleapis.com/css?family=Love+Ya+Like+A+Sister|Merriweather|Raleway&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="assets/style/style.css">
     <title>SOCORRA.ME</title>
 </head>
@@ -14,17 +15,22 @@
     <!-- INÍCIO HEADER -->
     
     <header>
-        <nav class="banner">
+        <nav class="banner fadeIn">
             <div class="nav">
                 <div>
                     <img class="nav__menu-hamburguer" src="assets/img/menu.png" alt="Ícone menu hamburguer">
-                </div>                
-                <h2 class="nav__titulo">SOCORRA.ME</h2>                
+                </div>
+                <div class="nav__titulo">
+                        <h2 class="nav__titulo">
+                            <a href="./index.html">SOCORRA.ME</a>
+                        </h2>     
+                    <img src="./assets/img/logo.png" alt="Logo">
+                </div>              
             </div>
             <div class="nav__menu">
-                <a href="about.html">Sobre</a>
-                <a href="">Primeiros socorros</a>
-                <a href="">Telefones importantes</a>
+                <a href="./about.html">Sobre</a>
+                <a href="./index.html">Primeiros socorros</a>
+                <a href="./telefones.html">Telefones importantes</a>
             </div>
         </nav>
     </header>
@@ -35,21 +41,13 @@
     <!-- INÍCIO MAIN -->
     <main>
 
-        <section class="about">
-            <div class="about__content">
-                <h2>SOBRE O SITE</h2>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel corporis, neque fugit velit temporibus dolore sequi suscipit repellendus officia quibusdam qui id quis ullam reiciendis odit distinctio animi debitis! A. Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                </p>
-            </div>
-        </section>
-
         <!-- INÍCIO SEARCH -->
 
         <div>
-            <form class="search" action="submit" method="post">
+            <form class="search">
                 <input class="search__text" type="text" placeholder="Pesquise aqui">
-                <button class="search__button" type="submit">
-                    <img src="./assets/img/search.png" alt="Ícone de busca">
+                <button class="search__button">
+                    <img src="./assets/img/close.png" alt="Ícone fechar">
                 </button>
             </form>
         </div>
