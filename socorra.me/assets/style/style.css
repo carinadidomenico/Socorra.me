@@ -1,0 +1,233 @@
+/* BASE */
+
+body {
+    margin: 0;
+    font-size: 16px;
+    font-family: 'Merriweather', serif;
+}
+
+a {
+    text-decoration: none;
+    cursor: pointer;
+    color: white;
+}
+
+
+
+/* NAVBAR */
+
+.nav {
+    width: 80%;
+    display: flex;
+    margin: 0px 10%;
+    padding-top: 1rem;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.nav__menu-hamburguer {
+    cursor: pointer;
+    width: 45px;
+    padding-top: 15px;
+}
+
+.nav__menu {
+    display: flex;
+    margin: 0 10%;
+    flex-direction: column;
+    color: white;
+    font-size: 1.5rem;
+    height: 0;
+    width: fit-content;
+    overflow: hidden;
+    transition: 1.5s;
+    font-family: 'Raleway', sans-serif;
+    
+}
+
+.nav__titulo {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 0 2rem;   
+    font-family: 'Love Ya Like A Sister', cursive;
+    color: white;
+}
+
+.nav__titulo h2 {
+    margin-right: 1rem;
+}
+
+.nav__titulo img {
+    width: 50px;
+}
+
+
+
+/* BANNER */
+
+.banner {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.178), rgba(255, 255, 255, 0.733)), url(../img/banner.png);
+    width: 100%;
+    height: 40vh;
+    background-size: cover;
+    background-position: center;
+}
+
+
+
+/* ABOUT */
+
+.about {
+    width: 80%;
+    margin: 3rem auto;
+    text-align: center;
+    border: 7px #09548c double;
+}
+
+.about h3 {
+    font-family: 'Raleway', sans-serif;
+}
+
+.about__content {
+    width: 90%;
+    margin: 0 auto;
+}
+
+
+
+/* TELEFONES IMPORTANTES */
+
+.telefones {
+    width: fit-content;
+    margin: 3rem auto;
+    border: 7px #09548c double;
+}
+
+.telefones h3 {
+    font-family: 'Raleway', sans-serif;
+}
+
+.telefones__content {
+    width: 90%;
+    margin: 0 auto;
+}
+
+
+
+/* SEARCH */
+
+.search {
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 70%;
+    padding: 20px;
+}
+
+.search__text {
+    border-radius: 5px;
+    padding: 10px;
+}
+
+.search__text:focus {
+    border: 2px solid #09548c;
+}
+
+.search__button {
+    background-color: white;
+    border: none;
+}
+
+.search__button img {
+    width: 20px;
+}
+
+
+
+/* CARD */
+
+
+.card__container {
+    width: 80%;
+    margin: 15px auto;
+    text-align: center;
+    border: 7px #09548c double;    
+}
+
+.card__content {
+    width: 90%;
+    margin: 0 auto;
+}
+
+
+/* FOOTER */
+
+.credits {
+    background: linear-gradient(#2783bd, #09548c);
+    width: 100%;
+    background-attachment: fixed;
+    text-align: center;
+    font-size: 1.15rem;
+    padding: 1.5rem 0;
+    color: white;
+    bottom: 0;
+}
+
+.credits a {
+    color: white;
+}
+
+
+
+/* ANIMAÇÕES */
+
+.fadeIn {
+    animation: fadeIn 1s ease-in-out;
+}
+
+@keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+
+
+
+/* RESPONSIVIDADE */
+
+@media only screen and (min-width: 768px) {
+    .card {
+        display: flex;
+        flex-flow: wrap;
+    }
+    .card__container {
+        width: 40%;
+    }
+    .search__text {
+        width: 40rem;
+    }
+    .search__button img {
+        width: 50px;
+    }
+    .banner {
+        height: 32rem;
+        background-size: contain;
+        background-position: top;
+        background-attachment: fixed;
+        clip-path: polygon(0 0, 100% 0, 100% 50%, 50% 100%, 0% 50%);
+    }
+    .nav {
+        padding-top: 2rem;
+    }
+    .nav__menu-hamburguer {
+        width: 45px;
+    }
+    .nav__titulo {
+        font-size: 3rem;
+    }
+    .search__button img {
+        width: 30px;
+    }
+}
